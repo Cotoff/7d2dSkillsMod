@@ -205,6 +205,19 @@
 		   <loot level="31,40" prob="0.8"/>
 		   <loot level="41,60" prob="1"/>
 		  </lootprobtemplate>
+		<lootprobtemplate name="tokenRookieTemplate">
+		   <loot level="1,10" prob="1"/>
+		   <loot level="11,60" prob="0.1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="tokenVeteranTemplate">
+		   <loot level="1,10" prob="0"/>
+		   <loot level="11,30" prob="1"/>
+		   <loot level="31,60" prob="0.1"/>
+		</lootprobtemplate>
+		<lootprobtemplate name="tokenMasterTemplate">
+		   <loot level="1,30" prob="0"/>
+		   <loot level="31,60" prob="1"/>
+		</lootprobtemplate>
 	</lootprobtemplates>
 	
 	<lootqualitytemplates>
@@ -300,6 +313,18 @@
 
 	<lootgroup name="empty"/>
 	
+	<lootgroup name="tokenHunter" count="1">
+		<item name="tokenHunterRookie" loot_prob_template="tokenRookieTemplate"/>		
+		<item name="tokenHunterVeteran" loot_prob_template="tokenVeteranTemplate"/>		
+		<item name="tokenHunterMaster" loot_prob_template="tokenMasterTemplate"/>		
+	</lootgroup>
+
+	<lootgroup name="tokenLooter" count="1">
+		<item name="tokenLooterRookie" loot_prob_template="tokenRookieTemplate"/>		
+		<item name="tokenLooterVeteran" loot_prob_template="tokenVeteranTemplate"/>		
+		<item name="tokenLooterMaster" loot_prob_template="tokenMasterTemplate"/>		
+	</lootgroup>
+
 	<lootgroup name="ammo" count="1,3">
 		<item name="shotgunShell" count="1,10"/>
 		<item name="9mmBullet" count="1,20"/>
@@ -491,30 +516,14 @@
 	</lootgroup>	
 	
 	<lootgroup name="commonBooks" count="1">
-	    <item name="book" prob="20"/>	
-		<item name="forgeAheadBook"/>	
-		<item name="crossbowSchematic"/>			
-		<item name="hammerSchematic"/>	
-		<item name="huntingKnifeBook"/>
-		<item name="pistolBook"/>
-		<item name="wrenchSchematic"/>		
-		<item name="sawedoffPumpShotgunSchematic"/>
-		<item name="pumpShotgunSchematic"/>				
-		<item name="huntingRifleSchematic"/>		
-		<item name="ammunitionNationBook"/>
-		<item name="shotgunShellSchematic"/>
-		<item name="9mmBulletSchematic"/>	
-		<item name="leatherTanning"/>
-		<item name="leatherBootsSchematic"/>
-		<item name="leatherHatSchematic"/>
-		<item name="leatherJacketSchematic"/>
-		<item name="leatherPantsSchematic"/>
-		<item name="leatherGlovesSchematic"/>
+	    <item name="book"/>	
+	    <item group="tokenLooter" prob="0.9"/>	
+		<!--  books never drop, can only be made with tokens -->		
 		
 	</lootgroup>
 	
 	<lootgroup name="books" count="1">
-		<item group="rareBooks" loot_prob_template="rareBookTemplate"/>		
+		<!--  books never drop, can only be made with tokens item group="rareBooks" loot_prob_template="rareBookTemplate"/-->		
 		<item group="commonBooks"/>
 	</lootgroup>
 	
@@ -927,12 +936,17 @@
     </lootcontainer>		
 	
     <!-- lootcontainer 11 safes, weapon caches rare good loot -->
-    <lootcontainer id="11" count="1,3" size="3,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
-		
+    <lootgroup name="safeGeneric" count="1,3">	
 		<item group="guns+ammo"/>	
-		<item group="books"/>		            
-		                        
-    </lootcontainer>	
+		<item group="books" prob="0.3"/>	            
+	</lootgroup>		
+	<lootgroup name="safeWithLooterToken" count="all">	
+		<item group="tokenLooter" count="1" />
+		<item group="safeGeneric" count="1" />
+	</lootgroup>	
+    <lootcontainer id="11" count="1" size="3,3" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
+		<item group="safeWithLooterToken"/>		            
+    </lootcontainer>
 	
     <!-- lootcontainer 12 deer -->
     <lootcontainer id="12" count="1" size="3,2" sound_open="UseActions/open_animal" sound_close="UseActions/close_animal" open_time="5" destroy_on_close="true" loot_quality_template="baseTemplate">
@@ -953,12 +967,17 @@
     </lootcontainer>	
 	
     <!-- lootcontainer 15 generic zombie loot-->
-    <lootcontainer id="15" count="0,2" size="3,1" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
-		
+    <lootgroup name="zombieGeneric" count="0,2">	
         <item group="junk"/>
 		<item group="rottenFood" prob="0.05"/>		
-        		      
-    </lootcontainer>	
+	</lootgroup>		
+	<lootgroup name="zombieGenericWithHunterToken" count="all">	
+		<item group="tokenHunter" count="1" />
+		<item group="zombieGeneric" count="1" />
+	</lootgroup>	
+    <lootcontainer id="15" count="1" size="3,1" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+        <item group="zombieGenericWithHunterToken"/>
+    </lootcontainer>		
 	
     <!-- lootcontainer 16 metal garbage can-->
     <lootcontainer id="16" count="0,3" size="3,1" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" loot_quality_template="baseTemplate">
@@ -968,12 +987,18 @@
     </lootcontainer>	
 	
     <!-- lootcontainer 17 zombie cop-->
-    <lootcontainer id="17" count="1,2" size="3,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="baseTemplate">
-    
+    <lootgroup name="zombieCop" count="1,2">	
     	<item group="pistol+ammo"/>
     	<item group="shotgun+ammo"/>
     	<item name="shamSandwich" count="1,5"/>
         <item group="ammo" />
+	</lootgroup>		
+	<lootgroup name="zombieCopWithHunterToken" count="all">	
+		<item group="tokenHunter" count="3,6" />
+		<item group="zombieCop" count="1" />
+	</lootgroup>	
+    <lootcontainer id="17" count="1" size="3,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="baseTemplate">
+            <item group="zombieCopWithHunterToken"/>
     </lootcontainer>	
 	
     <!-- lootcontainer 18 pig -->
@@ -994,10 +1019,16 @@
 
 
     <!-- lootcontainer 21 medical supplies dead nurse-->
-    <lootcontainer id="21" count="0,2" size="3,1" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
-		<item group="medicine" />	
-
-    </lootcontainer>		
+    <lootgroup name="zombieNurse" count="0,2">	
+    	<item group="medicine"/>
+	</lootgroup>		
+	<lootgroup name="zombieNurseWithHunterToken" count="all">	
+		<item group="tokenHunter" count="1" />
+		<item group="zombieNurse" count="1" />
+	</lootgroup>	    
+	<lootcontainer id="21" count="1" size="3,1" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+		<item group="zombieNurseWithHunterToken" />	
+    </lootcontainer>	
 		
     <!-- lootcontainer 22 garage stuff, tools, etc -->
     <lootcontainer id="22" count="0,2" size="3,3" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
@@ -1054,8 +1085,8 @@
     <!-- lootcontainer 34 Supply Crate General -->
     <lootcontainer id="34" count="4" size="10,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="baseTemplate">
     	<item group="militaryguns+ammo" />
-    	<item group="rareBooks" />		
 		<item group="airdropMedicine" />				
+		<item group="tokenLooter" count="1,3" />				
     </lootcontainer>	
 
     <!-- lootcontainer 35 tree hollowed stump, place where people stash things,  -->
@@ -1093,8 +1124,8 @@
     </lootcontainer>	
 	
     <!-- fat zombie loot  -->
-    <lootcontainer id="38" count="0,3" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
-    
+    <!-- fat zombie loot  -->
+    <lootgroup name="zombieFat" count="0,3">	
 		<item name="bottledWater" count="1,2" prob="0.15" />
 		<item name="shamSandwich" prob="0.2" />
 		<item group="cannedfood"  />		
@@ -1102,9 +1133,14 @@
 		<item group="ammo" prob="0.05"/>
         <item group="pistol+ammo" prob="0.01"/>
         <item name="animalFat" count="2,4"/>		
-		
+	</lootgroup>		
+	<lootgroup name="zombieFatWithHunterToken" count="all">	
+		<item group="tokenHunter" count="1,3" />
+		<item group="zombieFat" count="1" />
+	</lootgroup>	
+	<lootcontainer id="38" count="1" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+		<item group="zombieFatWithHunterToken"  />		
     </lootcontainer>	
-    
     <!-- shotgun messiah  -->
     <lootcontainer id="39" count="1,3" size="3,3" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="baseTemplate">
 		<item group="militaryguns+ammo" prob="0.1" />
@@ -1128,9 +1164,16 @@
     </lootcontainer>
     
     <!-- lootcontainer 42 gun safe -->
-    <lootcontainer id="42" count="2,6" size="10,4" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
+    <lootgroup name="gunSafe" count="2,6">	
+		<item group="guns+ammo"  />		
+	</lootgroup>		
+	<lootgroup name="gunSafeWithLooterToken" count="all">	
+		<item group="tokenLooter" count="1,2" />
+		<item group="gunSafe" count="1" />
+	</lootgroup>
+	<lootcontainer id="42" count="1" size="10,4" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
 		
-		<item group="guns+ammo"/>
+		<item group="gunSafeWithLooterToken"/>
 		
     </lootcontainer>	
     
@@ -1169,8 +1212,12 @@
    
     
     <!-- zombie dog loot-->
-    <lootcontainer id="47" count="1" size="3,1" sound_open="UseActions/open_animal" sound_close="UseActions/close_animal" open_time="5" loot_quality_template="baseTemplate">
+	<lootgroup name="zombieDogWithHunterToken" count="all">	
         <item group="zdog+hide"/>
+        <item group="tokenHunter" count="1,2"/>
+	</lootgroup>
+    <lootcontainer id="47" count="1" size="3,1" sound_open="UseActions/open_animal" sound_close="UseActions/close_animal" open_time="5" loot_quality_template="baseTemplate">
+        <item group="zombieDogWithHunterToken"/>
     </lootcontainer>  
     
     <!-- lootcontainer 48 purse  -->

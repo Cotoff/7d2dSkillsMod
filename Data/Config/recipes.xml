@@ -2310,5 +2310,313 @@
         <ingredient name="shortMetalPipe" count="1" grid="0, 1"/>
         <ingredient name="shortMetalPipe" count="1" grid="0, 2"/>
     </recipe>
+    <!-- ################# Skill system recipes ################### -->
+    <!-- token downgrades -->
+    <recipe name="tokenHunterRookie" count="1" scrapable="False" craft_time="5" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="1" grid="-2, -2"/>
+    </recipe>
+    <recipe name="tokenHunterVeteran" count="1" scrapable="False" craft_time="5" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="1" grid="-2, -2"/>
+    </recipe>
+    <recipe name="tokenLooterRookie" count="1" scrapable="False" craft_time="5" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenLooterVeteran" count="1" grid="-2, -2"/>
+    </recipe>
+    <recipe name="tokenLooterVeteran" count="1" scrapable="False" craft_time="5" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenLooterMaster" count="1" grid="-2, -2"/>
+    </recipe>
+
+    <!-- Rookie recipes -->
+    <recipe name="forgeAheadBook" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="10" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="2" grid="0, 0"/>
+        <ingredient name="scrapIron" count="5" grid="0, 1"/>
+    </recipe>
+    <recipe name="leatherTanning" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="10" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="animalHide" count="1" grid="0, 1"/>
+    </recipe>
+    <recipe name="leatherHatSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="0, 0"/>
+        <ingredient name="leather" count="1" grid="0, -1"/>
+    </recipe>
+    <recipe name="leatherJacketSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="0, 0"/>
+        <ingredient name="leather" count="1" grid="-1, 0"/>
+        <ingredient name="leather" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="leatherPantsSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="0, 0"/>
+        <ingredient name="leather" count="1" grid="-1, 0"/>
+    </recipe>
+    <recipe name="leatherGlovesSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="0, 0"/>
+        <ingredient name="leather" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="leatherBootsSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="0, 0"/>
+        <ingredient name="leather" count="1" grid="0, 1"/>
+    </recipe>
+    <recipe name="crossbowSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="10" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="feather" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="pistolBook" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="15" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="2" grid="0, 0"/>
+        <ingredient name="pistol_barrel" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="9mmBulletSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="15" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="2" grid="0, 0"/>
+        <ingredient name="bulletCasing" count="10" grid="1, 0"/>
+    </recipe>
+    <recipe name="pickSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="6" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="forgedIron" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="fireaxeSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="6" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="stoneAxe" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="shovelSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="6" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="stoneShovel" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="hoeSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="4" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="forgedIron" count="1" grid="0, -1"/>
+    </recipe>
+    <recipe name="woodFrameSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="4" grid="-1, 0"/>
+        <ingredient name="woodPlank" count="16" grid="1, 0"/>
+    </recipe>
+    <recipe name="cobbleStoneSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="8" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="rockSmall" count="16" grid="1, 0"/>
+    </recipe>
+    <recipe name="spikeSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="10" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="trunkPine" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="antibioticsSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="30" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="4" grid="0, 0"/>
+        <ingredient name="painkillers" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="gunpowderSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="4" grid="-1, 0"/>
+        <ingredient name="coal" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="blunderbussSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="10" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="shortMetalPipe" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="wrenchSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterRookie" count="5" grid="-1, 0"/>
+        <ingredient name="tokenLooterRookie" count="1" grid="0, 0"/>
+        <ingredient name="shortMetalPipe" count="1" grid="0, 1"/>
+    </recipe>
+
+    <!-- Veteran recipes -->
+    <recipe name="hammerSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="35" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="3" grid="0, -1"/>
+        <ingredient name="wrench" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="huntingKnifeBook" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="35" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="3" grid="0, -1"/>
+        <ingredient name="boneShiv" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="sawedoffPumpShotgunSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="35" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="4" grid="0, -1"/>
+        <ingredient name="shotgunShell" count="1" grid="1, 0"/>
+    </recipe>
+    <recipe name="pumpShotgunSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="60" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="PumpShotgun_barrel" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="huntingRifleSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="60" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="huntingRifleBolt" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="shotgunShellSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="35" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="4" grid="0, -1"/>
+        <ingredient name="paper" count="20" grid="1, 0"/>
+    </recipe>
+	<recipe name="ammunitionNationBook" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="45" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="scrapLead" count="2" grid="1, 0"/>
+        <ingredient name="scrapBrass" count="2" grid="-1, 0"/>
+    </recipe>
+	<recipe name="macDyverBook" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="100" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="12" grid="0, -1"/>
+        <ingredient name="scrapIron" count="2" grid="1, 0"/>
+        <ingredient name="leather" count="2" grid="-1, 0"/>
+    </recipe>
+	<recipe name="ironDoorSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="30" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="forgedIron" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="setInConcrete" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="45" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="7" grid="0, -1"/>
+        <ingredient name="stone" count="8" grid="1, 0"/>
+    </recipe>
+	<recipe name="ironArrowSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="15" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="2" grid="0, -1"/>
+        <ingredient name="ironArrowHead" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="mineSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="25" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="gunPowder" count="10" grid="1, 0"/>
+    </recipe>
+	<recipe name="barbedwireSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="20" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="4" grid="0, -1"/>
+        <ingredient name="scrapIron" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="pipebombSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="20" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="4" grid="0, -1"/>
+        <ingredient name="shortMetalPipe" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="fuelSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="35" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="4" grid="0, -1"/>
+        <ingredient name="tallow" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="brickSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="25" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="clay" count="1" grid="1, 0"/>
+    </recipe>
+	<recipe name="gasCanSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterVeteran" count="25" grid="0, 0"/>
+        <ingredient name="tokenLooterVeteran" count="5" grid="0, -1"/>
+        <ingredient name="scrapIron" count="1" grid="1, 0"/>
+        <ingredient name="scrapIron" count="1" grid="-1, 0"/>
+    </recipe>
+
+    <!-- Master recipes -->
+	<recipe name="theRiddleOfSteel" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="100" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="15" grid="1, -1"/>
+        <ingredient name="forgedIron" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="minibikesForDumbshits" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="180" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="15" grid="1, -1"/>
+        <ingredient name="ductTape" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="clubSpikedSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="clubBarbed" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="firstAidKitSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="antibiotics" count="1" grid="0, 0"/>
+        <ingredient name="bloodBag" count="1" grid="0, -2"/>
+    </recipe>
+	<recipe name="ironHelmetSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="scrapHelmet" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="ironChestArmorSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="100" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="scrapChestArmor" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="ironLegArmorSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="100" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="scrapLegArmor" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="ironBootsSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="scrapBoots" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="ironGlovesSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="scrapGloves" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="sledgehammerSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="60" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="7" grid="1, -1"/>
+        <ingredient name="hammer" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="762mmBulletSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="762mmBullet" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="10mmBulletSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="10mmBullet" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="theEnforcerMagazine" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="120" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="12" grid="1, -1"/>
+        <ingredient name="44MagnumGrip" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="smgSchematics" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="250" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="30" grid="1, -1"/>
+        <ingredient name="mp5_receiver" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="sniperRifleSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="250" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="30" grid="1, -1"/>
+        <ingredient name="sniperRifleParts" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="augerSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="200" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="20" grid="1, -1"/>
+        <ingredient name="augerBlade" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="shotgunSlugSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="80" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="shotgunSlug" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="handelbarsSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="60" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="10" grid="1, -1"/>
+        <ingredient name="shortMetalPipe" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="flamingArrowSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="60" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="7" grid="1, -1"/>
+        <ingredient name="steelArrow" count="1" grid="0, 0"/>
+    </recipe>
+	<recipe name="explodingCrossbowBoltSchematic" count="1" scrapable="False" craft_time="120" learn_exp_gain="0" craft_exp_gain="0" >
+        <ingredient name="tokenHunterMaster" count="60" grid="-1, -1"/>
+        <ingredient name="tokenLooterMaster" count="7" grid="1, -1"/>
+        <ingredient name="steelCrossbowBolt" count="1" grid="0, 0"/>
+    </recipe>
 
 </recipes>

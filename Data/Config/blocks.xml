@@ -701,7 +701,7 @@
       <property name="ItemCount" value="4" />
       <property name="UpgradeHitCount" value="4" />
     </property>
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
   </block>
 <!-- 296 free -->
 
@@ -819,7 +819,7 @@
 	<property name="HeatMapFrequency" value="25"/>
 	<property name="BuffsWhenWalkedOn" value="burningSmall"/>
     <drop event="Destroy" count="0" />
-    <property name="Group" value="Food/Cooking,Basics" />
+    <property name="Group" value="Food/Cooking" />
   </block>
   <block id="310" name="cookingPot">
     <property name="Material" value="metal" />
@@ -1962,7 +1962,7 @@
     <property name="IsTerrainDecoration" value="true" />
     <property name="CanPickup" value="true" />
     <drop event="Destroy" name="cloth" count="1,3" />
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
   </block>
   <block id="422" name="bedRoll01_2">
     <property name="Class" value="SiblingRemove" />
@@ -3946,7 +3946,7 @@
       <property name="UpgradeHitCount" value="4" />
     </property>
     <drop event="Destroy" count="0" />
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
     <property name="Place" value="Door" />
   </block>
 
@@ -4022,7 +4022,7 @@
     <drop event="Fall" name="woodDebris" count="1" prob="1.0"  stick_chance=".75" />    
     <property name="LPHardnessScale" value="8" />
     <property name="DowngradeBlock" value="storageChest" />
-    <property name="Group" value="Decor,Basics" />
+    <property name="Group" value="Decor" />
   </block>
   <block id="640" name="rockResource02">
     <property name="Material" value="boulder" />
@@ -11283,7 +11283,7 @@
     </property>
     <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
     <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" /> 
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
     <property name="Place" value="Door" />
   </block>
   
@@ -11310,7 +11310,7 @@
 	<property name="DowngradeBlock" value="garageDoorMetal_v1" />
     <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
     <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" /> 
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
     <property name="Place" value="Door" />
   </block>
 -->
@@ -11339,7 +11339,7 @@
 	<property name="MultiBlockDim" value="3,2,1" /> -->
     <drop event="Destroy" name="scrapIron" count="1,2" prob="1" />
     <drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance=".75" /> 
-    <property name="Group" value="Building,Basics" />
+    <property name="Group" value="Building" />
     <property name="Place" value="Door" />
   </block>
      
