@@ -1303,9 +1303,17 @@
   </lootcontainer>
   
       <!-- feral loot  -->
-    <lootcontainer id="61" count="1,3" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+    <lootgroup name="zombieFeral" count="1,3">	
 		<item group="militaryguns+ammo" prob="0.1" />
 		<item group="gunparts" prob="0.5" />	
+	</lootgroup>		
+	<lootgroup name="zombieFeralWithTokens" count="all">	
+		<item group="tokenLooter" count="1,2" />
+		<item group="tokenHunter" count="10,20" />
+		<item group="zombieFeral" count="1" />
+	</lootgroup>    
+	<lootcontainer id="61" count="1,3" size="3,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="baseTemplate">
+		<item group="zombieFeralWithTokens"/>	
     </lootcontainer>	
 	
 	<!-- minibike storage  -->
