@@ -994,8 +994,6 @@ WEAPON ATTACHABLES
             <property name="Rays_spread" value="0.95" />
             <property name="Crosshair_min_distance" value="30" />
             <property name="Crosshair_max_distance" value="50" />
-            <property name="DamageEntity" value="15" />
-            <property name="DamageBlock" value="1" />
             <property name="Magazine_size" value="8" />
             <property name="Magazine_items" value="shotgunShell" />
             <property name="Reload_time" value="2.6" />
@@ -1026,6 +1024,10 @@ WEAPON ATTACHABLES
             <property name="Zoom" value="5" />
             <property name="Pos" value="0.1,-0.05" />
             <property name="Rot" value="0,-45,0" />
+        </property>
+		<property class="Attributes">
+            <property name="EntityDamage" value="15,15" />
+            <property name="BlockDamage" value="1,1" />
         </property>
     </item>
     <item id="45" name="mp5">
@@ -1102,6 +1104,11 @@ WEAPON ATTACHABLES
             <property name="Zoom" value="40" />
             <property name="Pos" value="0.0,0.0" />
             <property name="Rot" value="10,0,0" />
+        </property>
+		<property class="Attributes">
+			<property name="GetQualityFromWeapon" value="true" />
+            <property name="EntityDamage" value="1,15" />
+            <property name="BlockDamage" value=".5,1" />
         </property>
     </item>
     <item id="49" name="sniperRifle">
@@ -2493,7 +2500,7 @@ WEAPON ATTACHABLES
         <property name="Stacknumber" value="250" />
         <property name="RepairAmount" value="25" />
         <property name="FuelValue" value="1" />
-        <property name="Weight" value="2" />
+        <property name="Weight" value="1" />
         <property name="Group" value="Resources" />
         <property class="Preview">
             <property name="Zoom" value="28" />
@@ -2793,6 +2800,11 @@ WEAPON ATTACHABLES
             <property name="DamageBonus.metal" value="0" />
             <property name="DamageBonus.cloth" value="0" />
         </property>
+		<property class="Attributes">
+			<property name="GetQualityFromWeapon" value="true" />
+            <property name="EntityDamage" value="20,45" />
+            <property name="BlockDamage" value=".5,1" />
+        </property>          
         <property name="Group" value="Ammo/Weapons" />
     </item>
     <item id="268" name="foodHoney">
@@ -2844,8 +2856,6 @@ WEAPON ATTACHABLES
             <property name="Rays_spread" value="0.75" />
             <property name="Crosshair_min_distance" value="30" />
             <property name="Crosshair_max_distance" value="50" />
-            <property name="DamageEntity" value="15" />
-            <property name="DamageBlock" value="1" />
             <property name="Magazine_size" value="8" />
             <property name="Magazine_items" value="shotgunShell, shotgunSlug" />
             <property name="Reload_time" value="2.6" />
@@ -2876,6 +2886,10 @@ WEAPON ATTACHABLES
             <property name="Zoom" value="5" />
             <property name="Pos" value="0.1,-0.05" />
             <property name="Rot" value="0,-45,0" />
+        </property>
+		<property class="Attributes">
+            <property name="EntityDamage" value="15,15" />
+            <property name="BlockDamage" value="1,1" />
         </property>
     </item>
     <item id="270" name="woodenBow">
@@ -3242,7 +3256,8 @@ WEAPON ATTACHABLES
         <property name="PartType" value="Stock" />
         <property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-        <property name="Material" value="metal" />
+        <property name="Material" value="wood" />
+        <property name="FuelValue" value="10" />
         <property name="HoldType" value="45" />
         <property name="Stacknumber" value="1" />
         <property name="Degradation" value="100" param1="true" />
@@ -5609,7 +5624,7 @@ WEAPON ATTACHABLES
             <!-- UseAction -->
             <property name="Class" value="LearnRecipe" />
             <property name="Title" value="The Enforcer Magazine" />
-            <property name="Description" value="Do you feel lucky punk? Well you should because /nnow you can assemble 44 Magnums and create 44 Magnum /nrounds, which will blow a man's head clean off." />
+            <property name="Description" value="Do you feel lucky punk? Well you should because \nnow you can assemble 44 Magnums and create 44 Magnum \nrounds, which will blow a man's head clean off." />
             <property name="Recipes_to_learn" value="44MagBullet,44Magnum" />
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
@@ -5687,7 +5702,7 @@ WEAPON ATTACHABLES
         <property name="Material" value="wood" />
         <property name="HoldType" value="45" />
         <property name="Stacknumber" value="250" />
-        <property name="FuelValue" value="12" />
+        <property name="FuelValue" value="10" />
         <property name="Group" value="Resources,Basics" />
     </item>
     <item id="618" name="cobblestones">
@@ -7321,7 +7336,7 @@ WEAPON ATTACHABLES
             <property name="Class" value="LearnRecipe" />
             <property name="Title" value="Forge Ahead. Blacksmithing, Metalworks and more." />
             <property name="Description" value="Teaches you how to build your own forge." />
-            <property name="Recipes_to_learn" value="forge" />
+
             <property name="Delay" value="0" />
             <property name="Sound_start" value="Misc/recipe_unlocked" />
         </property>
@@ -8998,9 +9013,10 @@ WEAPON ATTACHABLES
     </item>
     
     <item id="766" name="ironArrowHead">
-        <property name="Meshfile" value="Items/Crafting/ingotIron" />
+        <property name="Meshfile" value="Items/Misc/sackPrefab" />
+        <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
         <property name="Material" value="metal" />
-        <property name="HoldType" value="21" />
+        <property name="HoldType" value="45" />
         <property name="Weight" value="4" />
         <property name="Group" value="Resources" />
         <property class="Preview">
@@ -9033,8 +9049,6 @@ WEAPON ATTACHABLES
         <property name="Group" value="Ammo/Weapons" />
         <property class="Action1"> <!-- UseAction -->
             <property name="Class" value="Projectile" />
-            <property name="DamageEntity" value="150" />
-            <property name="DamageBlock" value="7" />
             <property name="Rays_per_shot" value="1" />
             <property name="Rays_spread" value="0.25" />
         </property>        
@@ -9042,7 +9056,12 @@ WEAPON ATTACHABLES
             <property name="Zoom" value="40" />
             <property name="Pos" value="0.0,0.0" />
             <property name="Rot" value="10,0,0" />
-        </property>     
+        </property>
+		<property class="Attributes">
+			<property name="GetQualityFromWeapon" value="true" />
+            <property name="EntityDamage" value="150,150" />
+            <property name="BlockDamage" value="7,7" />
+        </property>
     </item>       
               
     <item id="769" name="handBear">
@@ -9398,9 +9417,10 @@ WEAPON ATTACHABLES
     </item>    
     
     <item id="783" name="steelArrowHead">
-        <property name="Meshfile" value="Items/Crafting/ingotIron" />
+        <property name="Meshfile" value="Items/Misc/sackPrefab" />
+        <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
         <property name="Material" value="metal" />
-        <property name="HoldType" value="21" />
+        <property name="HoldType" value="45" />
         <property name="Weight" value="8" />
         <property name="Group" value="Resources" />
         <property class="Preview">
@@ -9875,5 +9895,20 @@ WEAPON ATTACHABLES
             <property name="Pos" value="0,-0.2" />
             <property name="Rot" value="90,45,0" />
         </property>
-    </item>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    </item>      
+    
+    <item id="802" name="bellows">
+        <property name="Meshfile" value="Items/Misc/sackPrefab" />
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+        <property name="Material" value="leather" />
+        <property name="HoldType" value="45" />
+        <property name="Stacknumber" value="1" />       
+        <property name="Weight" value="8" />
+        <property name="Group" value="Resources" />
+        <property class="Preview">
+            <property name="Zoom" value="28" />
+            <property name="Pos" value="0,-0.05" />
+            <property name="Rot" value="90,45,0" />
+        </property>
+    </item>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 </items>
