@@ -352,13 +352,13 @@
 	
 	<lootgroup name="deer+hide" count="all">
 		<item name="venison" count="3,7"/>
-		<item name="animalHide" count="2,4"/>	
+		<item name="animalHide" count="2,3"/>	
 		<item name="femur" count="1"/>
 		<item name="animalFat" count="2,3"/>	
 	</lootgroup>
 	
 	<lootgroup name="bear+hide" count="all">
-		<item name="bearMeat" count="4,7"/>
+		<item name="bearMeat" count="3,4"/>
 		<item name="animalHide" count="5,8"/>	
 		<item name="femur" count="4"/>
 		<item name="animalFat" count="6,12"/>	
@@ -366,13 +366,13 @@
 	
 	<lootgroup name="pig+hide" count="all">
 		<item name="pork" count="3,7"/>
-		<item name="animalHide" count="2,4"/>	
+		<item name="animalHide" count="2,3"/>	
 		<item name="femur" count="1"/>
 		<item name="animalFat" count="4,8"/>			
 	</lootgroup>			
 	
 	<lootgroup name="zdog+hide" count="all">
-		<item name="rottingFlesh" count="2,4"/>
+		<item name="rottingFlesh" count="1,2"/>
 		<item name="animalHide" count="1,3"/>	
 		<item name="femur" count="1"/>
 	</lootgroup>	
